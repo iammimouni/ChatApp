@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/welcome.css">
+    <script src="js/welcome.js" defer></script>
+</head>
+
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>Chat with My Friend</h1>
+        </header>
+        <div class="messages" id="messages">
+            <!-- Messages will be appended here -->
+        </div>
+        <form id="chatForm">
+            <input type="text" id="messageInput" placeholder="Type your message... 😊" required>
+            <button type="submit">Send</button>
+        </form>
+        <div class="emoji-picker" id="emojiPicker">
+            <span class="emoji" role="img" aria-label="smile">😊</span>
+            <span class="emoji" role="img" aria-label="thumbs up">👍</span>
+            <span class="emoji" role="img" aria-label="heart">❤️</span>
+            <span class="emoji" role="img" aria-label="laugh">😂</span>
+            <span class="emoji" role="img" aria-label="wink">😉</span>
+            <span class="emoji" role="img" aria-label="sad">😢</span>
+            <span class="emoji" role="img" aria-label="angry">😡</span>
+            <span class="emoji" role="img" aria-label="kiss">😘</span>
+            <span class="emoji" role="img" aria-label="party">🥳</span>
+            <span class="emoji" role="img" aria-label="star">⭐</span>
+            <!-- Add more emojis as needed -->
+        </div>
+    </div>
+</body>
+
+</html>

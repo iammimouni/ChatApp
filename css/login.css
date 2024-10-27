@@ -1,0 +1,140 @@
+/* General page setup */
+body {
+    background-image: url('../images/BackgroundFront.png');
+    /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(20, 20, 20);
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: filter 0.5s ease;
+    /* Smooth transition for page blur */
+}
+
+/* Apply blur effect only when the password field is focused */
+body.blurred {
+    filter: blur(5px) brightness(0.7);
+    /* Blurs and dims the background */
+}
+
+/* Login card styling */
+.lg-card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    /* Transparent dark background */
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    /* Red border with transparency */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    /* Red glowing shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Zoom effect on the login card only when password field is focused */
+.lg-card.active {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+    /* Stronger glow */
+}
+
+/* Glowing effect for input fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    outline: none;
+    background: rgba(20, 20, 20, 0.9);
+    /* Dark transparent background */
+    color: #ff4444;
+    /* Red text color */
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    /* Glowing text effect */
+}
+
+/* Smooth glowing effect on focus */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background: rgba(40, 40, 40, 0.9);
+    box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+/* Label styling */
+label {
+    color: #ff4444;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Login button styling */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.8);
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Forget Password button styling */
+button.forget-password {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: transparent;
+    color: rgba(255, 0, 0, 0.8);
+    border: none;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+button.forget-password:hover {
+    color: rgba(255, 0, 0, 1);
+    transform: scale(1.05);
+}
